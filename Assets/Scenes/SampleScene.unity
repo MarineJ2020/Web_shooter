@@ -1151,6 +1151,33 @@ MonoBehaviour:
   staminaRegenDelay: 1
   HealthUI_text: {fileID: 1323615595}
   StaminaUI_text: {fileID: 811818625}
+  hitSwayMagnitude: 18
+  hitSwayDuration: 0.6
+  hitVerticalKick: 2
+  swayCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!143 &1461466847
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1169,7 +1196,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1345,7 +1372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f0aae75882e1264db28c812894e9a13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.927
+      value: -1.084
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f0aae75882e1264db28c812894e9a13, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1387,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5488b21b59307d2498d747699380aac9, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 5f0aae75882e1264db28c812894e9a13, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1447,9 +1478,9 @@ MonoBehaviour:
   attackRange: 3
   attackConeAngle: 45
   attackDamage: 10
-  attackCooldown: 1.5
-  attackDelay: 1.25
-  raycastHeight: 0.56
+  attackCooldown: 3
+  attackDelay: 1.5
+  raycastHeight: 0.83
   maxHealth: 100
   debugRays: 0
   animator: {fileID: 1362570798}
